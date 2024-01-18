@@ -11,8 +11,8 @@ Clone this repository and change directory (cd) into it.
 Make sure to create the following data folders under disco by running:
 
 ```
-mkdir -p disco/data/raw disco/data/processed disco/data/augmentations
-
+cd instrument-classifier
+mkdir -p disco/data/raw disco/data/processed disco/data/augmented
 ```
 
 Full directory structure [here](#misc).
@@ -22,9 +22,8 @@ Full directory structure [here](#misc).
 Download the OpenMIC-2018 dataset from [here](https://zenodo.org/record/1432913#.Yb6Q9pNKhTY) and place `openmic-2018-v1.0.0.tgz` and untar it under `disco/data/raw/` as follows:
 
 ```
-cd disco/data/raw
-tar -xzvf openmic-2018-v1.0.0.tgz
-
+wget https://zenodo.org/records/1432913/files/openmic-2018-v1.0.0.tgz -P disco/data/raw
+tar -xzvf disco/data/raw/openmic-2018-v1.0.0.tgz -C disco/data/raw/
 ```
 
 ### 1. Environment Setup
@@ -75,9 +74,7 @@ To configure the hyperparameters, model spec etc. please edit the `disco/config.
 To train the model, execute the following:
 
 ```
-
 python3 -m disco.scripts.train
-
 ```
 
 > Note: All model artifacts will be saved under the `results/` folder.
@@ -164,7 +161,7 @@ Current SOTA performance on OpenMIC-2018:
 
 ## Troubleshooting
 
-- Note that `librosa` is not compatible with Python `3.12`
+- Note that `librosa` (specifically `numba`) is not compatible with Python `3.12`
 
 ## References
 
