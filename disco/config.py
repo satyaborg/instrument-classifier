@@ -23,7 +23,7 @@ TARGET_SAMPLE_RATE: str = 16000  # Hz
 
 # hyperparameters
 EPOCHS: int = 100
-BATCH_SIZE: int = 32  # 32, 64
+BATCH_SIZE: int = 64  # 32, 64
 LEARNING_RATE: float = 1e-04  # 1e-03, 1e-04
 
 # regularizers
