@@ -13,15 +13,21 @@ if __name__ == "__main__":
     print(f"==> Training classifiers on {config.DATASET_NAME} dataset ...")
     print(f"==> Using pretrained embeddings from {config.MODEL_NAME} ...")
     print(f"==> Augmentations: {config.AUGMENT} ...")
+
+    # initialize the model
     dense_model = DenseClassifier(
         input_shape=config.MODELS.get(config.MODEL_NAME).get("in_dim"),
         num_classes=config.N_CLASSES,
         dropout=config.DROPOUT,
         l2_regularization=config.L2_REGULARIZATION,
     )
+
+    # initialize the trainer
     trainer = ModelTrainer(
         dense_model, config.LEARNING_RATE, export_path=config.EXPORT_PATH
     )
+
+    # compile the model
     trainer.compile()
 
     print(f"==> Loading train and test splits from {config.PARTITIONS_PATH} ...")
@@ -41,6 +47,7 @@ if __name__ == "__main__":
     )
 
     print("==> Preparing dataloaders ..")
+    # prepare dataloaders
     trainloader = AudioDataLoader(
         train_split["filename"].tolist(),
         batch_size=config.BATCH_SIZE,
@@ -67,9 +74,6 @@ if __name__ == "__main__":
 
     # start training
     trainer.train(train_dataset, epochs=config.EPOCHS, validation_data=valid_dataset)
-
-    # plot metrics
-    trainer.plot_metrics()
 
     # evaluate on test set
     trainer.evaluate(test_dataset)

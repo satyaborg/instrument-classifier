@@ -1,0 +1,1 @@
+{"runid": 1705617488, "model_name": "vggish", "seed": 42, "epochs": 100, "batch_size": 64, "learning_rate": 0.0001, "dropout": 0.5, "l2_regularization": 0.01}

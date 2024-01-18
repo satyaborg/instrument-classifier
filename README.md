@@ -87,7 +87,7 @@ To analyse the different runs, execute the following:
 python3 -m disco.scripts.analyse
 ```
 
-This will generate a `results.csv` file under the `results/` folder, which can be used to compare the different run, along with plots for loss and metrics.
+This will generate a `results.csv` file under the `disco/results/` folder, which can be used to compare the different run, along with HTML plots for loss and metrics.
 
 ## OpenMIC-2018 Dataset
 
