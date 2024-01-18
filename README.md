@@ -1,4 +1,4 @@
-# Disco Instrument Classifier
+# Instrument Classification
 
 Deep learning based instrument classification on OpenMIC-2018 dataset.
 
@@ -15,42 +15,7 @@ mkdir -p disco/data/raw disco/data/processed disco/data/augmentations
 
 ```
 
-Full directory structure:
-
-```
-.
-├── disco/
-│   ├── data/
-│   │   ├── augmented/
-│   │   │   ├── vggish_features
-│   │   │   └── ..
-│   │   ├── processed/
-│   │   │   ├── vggish_features
-│   │   │   └── ..
-│   │   └── raw/
-│   │       ├── openmic-2018
-│   │       └── openmic-2018-v1.0.0.tgz
-│   ├── models/
-│   │   ├── dense.py
-│   │   └── ..
-│   ├── results/
-│   │   ├── results.csv
-│   │   └── ..
-│   ├── scripts/
-│   │   ├── analyse.py
-│   │   ├── augment.py
-│   │   ├── preprocess.py
-│   │   └── train.py
-│   ├── utils/
-│   │   ├── dataloader.py
-│   │   ├── helpers.py
-│   │   └── trainer.py
-│   └── config
-├── .gitignore
-├── venv
-├── README.md
-└── requirements.txt
-```
+Full directory structure [here](#misc).
 
 ### 0. Download Dataset
 
@@ -196,6 +161,41 @@ Current SOTA performance on OpenMIC-2018:
 - Humphrey, Eric J., Durand, Simon, and McFee, Brian. "OpenMIC-2018: An Open Dataset for Multiple Instrument Recognition." in Proceedings of the 19th International Society for Music Information Retrieval Conference (ISMIR), 2018.
 - https://paperswithcode.com/sota/instrument-recognition-on-openmic-2018
 
-```
+## Misc
 
+- Directory structure
+
+```
+.
+├── disco/
+│   ├── data/
+│   │   ├── augmented/
+│   │   │   ├── vggish_features
+│   │   │   └── ..
+│   │   ├── processed/
+│   │   │   ├── vggish_features
+│   │   │   └── ..
+│   │   └── raw/
+│   │       ├── openmic-2018
+│   │       └── openmic-2018-v1.0.0.tgz
+│   ├── models/
+│   │   ├── dense.py
+│   │   └── ..
+│   ├── results/
+│   │   ├── results.csv
+│   │   └── ..
+│   ├── scripts/
+│   │   ├── analyse.py
+│   │   ├── augment.py
+│   │   ├── preprocess.py
+│   │   └── train.py
+│   ├── utils/
+│   │   ├── dataloader.py
+│   │   ├── helpers.py
+│   │   └── trainer.py
+│   └── config
+├── .gitignore
+├── venv
+├── README.md
+└── requirements.txt
 ```
