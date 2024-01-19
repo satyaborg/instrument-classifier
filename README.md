@@ -4,9 +4,9 @@ Deep learning based instrument classification on OpenMIC-2018 dataset.
 
 ## Getting Started
 
-> Note: Fully tested on WSL2 with Python 3.11.0 on NVIDIA GeForce RTX 2080 (CUDA 12.2).
+> Note: Fully tested on WSL2 with Python 3.11 on NVIDIA GeForce RTX 2080 (CUDA 12.2).
 
-Clone this repository and change directory (cd) into it.
+Clone this repository and change directory into it.
 
 Make sure to create the following data folders under disco by running:
 
