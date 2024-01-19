@@ -61,7 +61,7 @@ Elapsed times (per tested system):
 - 61.48 mins w/ augmentations
 - 16.246 mins w/o augmentations
 
-> Note: Transfer learning was also considered by allowing VGGish to be the base model (with frozen and trainable for the early and later ones respectively). Due to lack of resources, time constraints and issues with tensor dimension issues when intializing `hub.KerasLayer`, hence was not pursued further.
+> Note: Transfer learning was also considered by allowing VGGish to be the base model (with its layers frozen and trainable for the early and later ones respectively). Due to time constraints and issues with tensor dimension when intializing `hub.KerasLayer`, this was not pursued further.
 
 ### 3. Configuration
 
